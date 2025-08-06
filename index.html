@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Comprehension Strategies for Tier 2 & 3</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter & Lora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Alpine.js for interactivity -->
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <style>
+        /* Custom styles to enhance the theme */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f9f4; /* A very light green */
+        }
+        h1, h2, h3, h4, h5 {
+            font-family: 'Lora', serif;
+        }
+        .hero-section {
+            background-image: url('https://media.istockphoto.com/id/470710638/vector/watercolor-green-tree-with-hunging-books.jpg?s=612x612&w=0&k=20&c=cHN668u96q7FpGyFtTkhAHZLhBfNs6UALTaTRPKJM14=');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-text {
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        .card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-content {
+            flex-grow: 1;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .card-image {
+            background-color: #e9f5e9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem; /* Larger emoji */
+            height: 12rem; /* 192px */
+            width: 100%;
+            object-fit: cover;
+        }
+        .modal-overlay {
+            transition: opacity 0.3s ease-in-out;
+        }
+        /* Added for responsive video embeds */
+        .aspect-w-16 { position: relative; padding-bottom: 56.25%; }
+        .aspect-h-9 { height: 0; }
+        .aspect-w-16 > iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        
+        [x-cloak] { display: none !important; }
+
+        .reference-item {
+            text-indent: -36px;
+            padding-left: 36px;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-green-800 font-lora">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 inline-block mr-2 text-green-600" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L9 9.617l-4.243 2.122a1 1 0 00-.576 1.333l1.423 2.846a1 1 0 001.333.576l4.243-2.122 4.243 2.122a1 1 0 001.333-.576l1.423-2.846a1 1 0 00-.576-1.333L11 9.617l6.394-3.197a1 1 0 000-1.84l-7-3zM9 11.617l-1.423 2.846L9 13.383l1.423-2.846L9 11.617z" />
+                </svg>
+                Cultivating Comprehension
+            </div>
+            <ul class="flex flex-wrap space-x-4 text-green-700 font-medium">
+                <li><a href="#strategies" class="hover:text-green-900">Strategies</a></li>
+                <li><a href="#questions" class="hover:text-green-900">Questions</a></li>
+                <li><a href="#self-monitoring" class="hover:text-green-900">Self-Monitoring</a></li>
+                <li><a href="#lesson-plans" class="hover:text-green-900">Lessons</a></li>
+                <li><a href="#videos" class="hover:text-green-900">Videos</a></li>
+                <li><a href="#resources" class="hover:text-green-900">Printables</a></li>
+                <li><a href="#other-resources" class="hover:text-green-900">More Resources</a></li>
+                <li><a href="#references" class="hover:text-green-900">References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section text-white relative">
+            <div class="absolute inset-0 bg-green-900/60"></div>
+            <div class="container mx-auto px-6 py-24 text-center relative">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 hero-text">Cultivating Comprehension</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto hero-text leading-relaxed">A Professional Development Resource for Supporting Tier 2 & Tier 3 Readers in Grades 4 & 5</p>
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-green-800 mb-4">Welcome, Educators!</h2>
+                <p class="max-w-3xl mx-auto text-lg text-gray-600">
+                    This portfolio is designed to provide you with practical, evidence-based strategies to support students who require targeted reading instruction. By focusing on foundational comprehension skills, we can help every child blossom into a confident, capable reader.
+                </p>
+            </div>
+        </section>
+
+        <!-- Needs and Vision Statement -->
+        <section id="vision" class="py-16 bg-green-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-green-800 mb-8">Our Needs & Vision</h2>
+                <div class="max-w-3xl mx-auto text-lg text-gray-700 space-y-6">
+                    <p>To become active readers, students must first learn to use comprehension strategies. This professional development addresses this need by focusing on explicit, small-group instruction for Tier 2 and Tier 3 students.</p>
+                    <p>Research shows that individualized, small-group instruction is highly effective for addressing specific skill gaps in comprehension (Al Otaiba et al., 2011). Our goal is to unify our school's approach to RTI by providing a common framework and language for teaching these strategies. Through modeling, hands-on practice, and collaboration (Beers, 2003; Shearer et al., 2019), we will create consistent and effective comprehension support for all students.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Reading Strategies Section -->
+        <section id="strategies" class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-green-800 mb-12">Key Comprehension Strategies</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    
+                    <!-- Strategy Card 1: Activating Prior Knowledge -->
+                    <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="card-image">🧠</div>
+                        <div class="p-6 card-content">
+                            <h3 class="text-xl font-bold text-green-800 mb-2">Activating Prior Knowledge</h3>
+                            <p class="text-gray-600 mb-4">Help students connect what they already know to what they are reading. This builds a foundation for new information and helps them make connections between new information and what they already know.</p>
+                            <h4 class="font-bold text-green-700 mt-4 mb-2">Small Group Focus:</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                <li><strong>Tier 2:</strong> Use an "Anticipation Guide" where students agree/disagree with statements about the topic before reading. Also, try "Text-to-Self" connections using sentence starters like, "This reminds me of a time when..."</li>
+                                <li><strong>Tier 3:</strong> Do a "Concept Sort" with pictures or vocabulary words. Before reading a book about animals, have them sort pictures into "lives in water" and "lives on land." Also, use short, related video clips to build background knowledge.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Strategy Card 2: Questioning -->
+                    <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="card-image">❓</div>
+                        <div class="p-6 card-content">
+                            <h3 class="text-xl font-bold text-green-800 mb-2">Questioning</h3>
+                            <p class="text-gray-600 mb-4">This strategy creates a reason for reading. Students ask questions to clarify meaning, understand characters and events more clearly, understand the author’s purpose, and make predictions. This creates a fluid conversation between the student and the text.</p>
+                            <h4 class="font-bold text-green-700 mt-4 mb-2">Small Group Focus:</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                <li><strong>Tier 2:</strong> Introduce "Question-Answer Relationship (QAR)." Help students identify if the answer is "Right There," "Think and Search," "Author and Me," or "On My Own." Use a "Parking Lot" chart where students can post questions on sticky notes as they read.</li>
+                                <li><strong>Tier 3:</strong> Use a "Question Spinner" with simple question words (Who, What, Where, When). Students spin and ask a question about a picture or a single sentence. Model turning statements from the text into questions.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Strategy Card 3: Visualizing -->
+                    <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="card-image">🎬</div>
+                        <div class="p-6 card-content">
+                            <h3 class="text-xl font-bold text-green-800 mb-2">Visualizing</h3>
+                            <p class="text-gray-600 mb-4">Also called creating "mind pictures," this strategy encourages readers to use their imagination and sensory details from the text to construct mental images. This active engagement with the text helps improve comprehension and memory.</p>
+                            <h4 class="font-bold text-green-700 mt-4 mb-2">Small Group Focus:</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                <li><strong>Tier 2:</strong> Do a "Guided Imagery" activity. Read a highly descriptive passage aloud while students have their eyes closed. Pause and have them "draw what they hear" on a whiteboard.</li>
+                                <li><strong>Tier 3:</strong> Use manipulatives like play-doh or pipe cleaners. After reading a simple sentence, have students build what they visualize. Also, have students act out a simple scene from the text.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Strategy Card 4: Making Inferences -->
+                    <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="card-image">🧩</div>
+                        <div class="p-6 card-content">
+                            <h3 class="text-xl font-bold text-green-800 mb-2">Making Inferences</h3>
+                            <p class="text-gray-600 mb-4">Inferencing is reaching a conclusion based on evidence and reasoning. It's a vital skill for higher-order thinking. This strategy helps students use their knowledge to identify implied ideas and become aware of their own thinking process.</p>
+                            <h4 class="font-bold text-green-700 mt-4 mb-2">Small Group Focus:</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                <li><strong>Tier 2:</strong> Play "Riddle Me This." Provide short riddles where students must infer the answer based on the clues. Use cartoon strips with the dialogue removed and have students infer what the characters are saying.</li>
+                                <li><strong>Tier 3:</strong> Be "Picture Detectives." Show a photograph of a person and ask students to infer their feelings based on facial expression and body language. Use wordless picture books to practice telling the story based on visual clues.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Strategy Card 5: Summarizing -->
+                    <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="card-image">🎯</div>
+                        <div class="p-6 card-content">
+                            <h3 class="text-xl font-bold text-green-800 mb-2">Summarizing</h3>
+                            <p class="text-gray-600 mb-4">This strategy moves beyond simple retelling. It focuses on students identifying and retelling the most important aspects of the story in order. Students learn to focus on key words, shorten the story into its main concepts, and consolidate the information in their own words.</p>
+                            <h4 class="font-bold text-green-700 mt-4 mb-2">Small Group Focus:</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                <li><strong>Tier 2:</strong> Use the "Somebody Wanted But So Then" (SWBST) framework to break down a narrative. Also, try the "GIST" strategy where students summarize a paragraph in exactly 15-20 words.</li>
+                                <li><strong>Tier 3:</strong> Create a "Story Rope." After reading, use a piece of yarn and have students tie a knot for each key event. They then use the knots as prompts to retell the story in sequence. Use picture sequencing cards for retelling.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Strategy Card 6: Determining Importance -->
+                    <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="card-image">🔑</div>
+                        <div class="p-6 card-content">
+                            <h3 class="text-xl font-bold text-green-800 mb-2">Determining Importance</h3>
+                            <p class="text-gray-600 mb-4">Help students sift through information to focus on what's most important, ignoring irrelevant details. This involves looking for text features, noticing repeated ideas, and thinking about the author's purpose.</p>
+                            <h4 class="font-bold text-green-700 mt-4 mb-2">Small Group Focus:</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                <li><strong>Tier 2:</strong> Have students become "Headline Writers." After reading a short non-fiction passage, they must write a newspaper-style headline that captures the main idea. Use two different colored highlighters to mark "main ideas" vs. "interesting details."</li>
+                                <li><strong>Tier 3:</strong> Use a "Must-Know vs. Nice-to-Know" T-chart with pre-written sentence strips for sorting. Focus on identifying text features like titles, headings, and bold words as clues to what is important.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Strategy Card 7: Predicting -->
+                    <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="card-image">🔮</div>
+                        <div class="p-6 card-content">
+                            <h3 class="text-xl font-bold text-green-800 mb-2">Predicting</h3>
+                            <p class="text-gray-600 mb-4">Effective readers use pictures, titles, headings, and personal experiences to make predictions before they even begin to read. This strategy involves thinking ahead, anticipating information and events, and then refining, revising, and verifying those predictions as they read.</p>
+                            <h4 class="font-bold text-green-700 mt-4 mb-2">Small Group Focus:</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                <li><strong>Tier 2:</strong> Do a "Mystery Bag" prediction. Place objects related to the story in a bag and have students revise their prediction as each object is revealed. Use a "Prediction Tracker" graphic organizer.</li>
+                                <li><strong>Tier 3:</strong> Use "Cover Clues." Before opening a book, have students make one simple prediction based only on the title and cover. Pause after the first page and ask, "Was your prediction on the right track?"</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Strategy Card 8: Guided Discussions -->
+                    <div class="card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="card-image">💬</div>
+                        <div class="p-6 card-content">
+                            <h3 class="text-xl font-bold text-green-800 mb-2">Guided Discussions</h3>
+                            <p class="text-gray-600 mb-4">This involves leading a conversation guided by a specific goal or idea to enhance understanding. This strategy is particularly useful when students are missing key concepts that are vital for comprehension. Using open-ended questions helps students explore their thinking.</p>
+                            <h4 class="font-bold text-green-700 mt-4 mb-2">Small Group Focus:</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                <li><strong>Tier 2:</strong> Use "Talking Sticks" or a "Talking Ball" to ensure equitable participation. Introduce "Accountable Talk" sentence stems like "I agree with... because..." or "I want to add on to what... said."</li>
+                                <li><strong>Tier 3:</strong> Implement "Think-Pair-Share." Ask a very specific, literal question. Give students a moment to think, then have them share their answer with a partner before sharing with the group. Use picture prompts to start conversations.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guided Reading Questions Section -->
+        <section id="questions" class="py-16 bg-green-50" x-data="{ tab: 'fiction' }">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-green-800 mb-4">Guided Reading Questions</h2>
+                <p class="max-w-3xl mx-auto text-center text-lg text-gray-600 mb-8">
+                    Use these questions to spark discussion and deepen comprehension before, during, and after reading.
+                </p>
+                <!-- Tabs -->
+                <div class="flex justify-center border-b-2 border-green-200 mb-8">
+                    <button @click="tab = 'fiction'" :class="{ 'border-green-700 text-green-700': tab === 'fiction', 'border-transparent text-gray-500 hover:text-green-700': tab !== 'fiction' }" class="py-4 px-6 block font-medium border-b-4 focus:outline-none">
+                        Fiction
+                    </button>
+                    <button @click="tab = 'nonfiction'" :class="{ 'border-green-700 text-green-700': tab === 'nonfiction', 'border-transparent text-gray-500 hover:text-green-700': tab !== 'nonfiction' }" class="py-4 px-6 block font-medium border-b-4 focus:outline-none">
+                        Non-Fiction
+                    </button>
+                </div>
+
+                <!-- Fiction Content -->
+                <div x-show="tab === 'fiction'" x-cloak class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="font-bold text-xl text-green-800 mb-4">Before Reading</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Based on the title/cover, what do you think this story will be about?</li>
+                            <li>What does the title remind you of?</li>
+                            <li>What predictions can you make about the main character?</li>
+                            <li>What are you wondering about?</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="font-bold text-xl text-green-800 mb-4">During Reading</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>How do you think this text will end? Why?</li>
+                            <li>What important events have already happened?</li>
+                            <li>How do you think the main character will change?</li>
+                            <li>Visualize an event from the story and describe it.</li>
+                            <li>Is there anything you don't understand that we should reread?</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="font-bold text-xl text-green-800 mb-4">After Reading</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>What do you think the author wanted you to learn?</li>
+                            <li>Who does the main character remind you of?</li>
+                            <li>How might the plot change if it was written from a different character's point of view?</li>
+                            <li>Summarize this text in 2-4 sentences.</li>
+                            <li>Would you read this text again? Why or why not?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Non-Fiction Content -->
+                <div x-show="tab === 'nonfiction'" x-cloak class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="font-bold text-xl text-green-800 mb-4">Before Reading</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>What do you think the main topic of this text will be?</li>
+                            <li>What do you already know about this topic?</li>
+                            <li>What does the title or book cover remind you of?</li>
+                            <li>What clues did the author give you through the title, images, or text features?</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="font-bold text-xl text-green-800 mb-4">During Reading</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>Based on this heading, what do you think this section will be about?</li>
+                            <li>How do the text features on this page relate to the text?</li>
+                            <li>What have you learned so far?</li>
+                            <li>What unfamiliar words has the author used in the text?</li>
+                            <li>Summarize what we have read so far.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="font-bold text-xl text-green-800 mb-4">After Reading</h3>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700">
+                            <li>What was this text mainly about?</li>
+                            <li>What details from the text supported the main idea?</li>
+                            <li>What is something new you learned from the text?</li>
+                            <li>What questions do you still have about this topic?</li>
+                            <li>Where could you go to find out more information?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Self-Monitoring Section -->
+        <section id="self-monitoring" class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-green-800 mb-4">The SMART Self-Monitoring Approach</h2>
+                <p class="max-w-3xl mx-auto text-center text-lg text-gray-600 mb-12">
+                    Empower students to become metacognitive readers with the Self-Monitoring Approach to Reading and Thinking (SMART). This teaches them to monitor their own comprehension and use "fix-up" strategies when meaning breaks down.
+                </p>
+                <div class="bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
+                    <h3 class="text-2xl font-bold text-green-800 mb-6">Implementing the SMART Strategy</h3>
+                    
+                    <div class="mb-6">
+                        <h4 class="font-bold text-xl text-green-700 mb-2">Phase 1: Teacher Modeling</h4>
+                        <p class="text-gray-600">The teacher should model the entire SMART strategy several times before asking students to use it. Use a think-aloud process to show students how you monitor your own reading, identify confusion, and use strategies to fix it.</p>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="font-bold text-xl text-green-700 mb-2">Phase 2: Guided Practice</h4>
+                        <ol class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 bg-green-600 text-white rounded-full h-8 w-8 flex items-center justify-center font-bold mr-4">1</div>
+                                <div>
+                                    <h5 class="font-bold text-lg">Check for Understanding</h5>
+                                    <p class="text-gray-600">After students read a section, ask them to use a pencil to place a check mark (✓) next to each paragraph they understand and a question mark (?) by each one they do not.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 bg-green-600 text-white rounded-full h-8 w-8 flex items-center justify-center font-bold mr-4">2</div>
+                                <div>
+                                    <h5 class="font-bold text-lg">Stop and Paraphrase</h5>
+                                    <p class="text-gray-600">At the end of each paragraph, students stop and explain to themselves in their own words what they read. They may look back at the text as they do this.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 bg-green-600 text-white rounded-full h-8 w-8 flex items-center justify-center font-bold mr-4">3</div>
+                                <div>
+                                    <h5 class="font-bold text-lg">Reread and Identify the Problem</h5>
+                                    <p class="text-gray-600">When students finish, they go back to each question mark (?) and reread the paragraph. If they still don't understand, they should try to determine what the problem is: Is it an unfamiliar word? A confusing sentence? A new topic?</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 bg-green-600 text-white rounded-full h-8 w-8 flex items-center justify-center font-bold mr-4">4</div>
+                                <div>
+                                    <h5 class="font-bold text-lg">Try a Repair Strategy</h5>
+                                    <p class="text-gray-600">Guide students to use a fix-up strategy: use the glossary, look at pictures or graphics, examine other parts of the chapter, or get help from the teacher or a classmate.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-xl text-green-700 mb-2">Phase 3: Independent Practice</h4>
+                        <p class="text-gray-600">Have students read a passage independently using the check mark/question mark system. They can then work with a partner, verbalizing what they understand and working together to solve problems. Emphasize that before asking for help, students should be able to identify the source of their problem and what they have already tried to do to solve it.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Example Lesson Plans Section -->
+        <section id="lesson-plans" class="py-16 bg-green-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-green-800 mb-12">Example Lesson Plans</h2>
+                
+                <!-- Inference Lesson Plan -->
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow mb-12">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-green-800">Unlocking the Clues: Making Inferences</h3>
+                        <p class="text-gray-600">4th Grade ELA</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <h4 class="font-bold text-xl text-green-700 mb-2">Objectives</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Define inference and its role in comprehension.</li>
+                                <li>Use textual evidence and background knowledge to make inferences.</li>
+                                <li>Support inferences with evidence from the text.</li>
+                                <li>Develop claims using evidence from multiple sources.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl text-green-700 mb-2">Materials</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Age-appropriate informational or narrative texts</li>
+                                <li>"Clues + What I Know = Inference" graphic organizer</li>
+                                <li>Highlighters, whiteboard, sentence frames</li>
+                                <li>"Think-Aloud" prompt cards</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-xl text-green-700 mb-4 border-b-2 border-green-200 pb-2">5E Model Procedure</h4>
+                        <div class="space-y-6">
+                            <div>
+                                <h5 class="font-bold text-lg">1. Engage (10-15 min)</h5>
+                                <p class="text-gray-700"><strong>Mystery Bag/Picture:</strong> Use a "mystery bag" or an evocative picture to have students guess what's inside or what's happening. Explain this "figuring out" is making an inference.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">2. Explore (15-20 min)</h5>
+                                <p class="text-gray-700"><strong>Shared Reading & Clue Hunt:</strong> Read a short, engaging text aloud. As a class, highlight or underline specific words and phrases that serve as clues.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">3. Explain (20-25 min)</h5>
+                                <p class="text-gray-700"><strong>Explicit Instruction:</strong> Introduce the formula: Text Clues + What I Already Know = Inference. Use a think-aloud to model filling out the graphic organizer with an example from the text.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">4. Elaborate (25-30 min)</h5>
+                                <p class="text-gray-700"><strong>Partner Practice (Think-Pair-Share):</strong> In pairs, students use a new passage and the graphic organizer to answer inferential questions, using prompt cards to articulate their thinking.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">5. Evaluate (15-20 min)</h5>
+                                <p class="text-gray-700"><strong>Independent Application:</strong> Students independently use the graphic organizer and write a short paragraph to answer an inferential question about a new text, supporting their claim with evidence.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="font-bold text-xl text-green-700 mb-4 border-b-2 border-green-200 pb-2">Differentiation & Assessment</h4>
+                        <div class="grid md:grid-cols-2 gap-6 text-gray-700">
+                            <div>
+                                <h5 class="font-semibold mb-2">Differentiation Strategies</h5>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>Pre-teach vocabulary and chunk text for struggling readers.</li>
+                                    <li>Provide sentence frames and visual supports for ELs.</li>
+                                    <li>Offer extended time and reduced workload for students with IEPs.</li>
+                                    <li>Challenge advanced learners with complex texts and have them create their own inferential questions.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold mb-2">Assessment Methods</h5>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li><strong>Formative:</strong> Observe partner discussions and review graphic organizers during class.</li>
+                                    <li><strong>Summative:</strong> Evaluate the independent written response for a clear inference supported by textual evidence.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Summarizing Lesson Plan -->
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow mb-12">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-green-800">Summarizing with "Somebody Wanted But So Then"</h3>
+                        <p class="text-gray-600">5th Grade ELA - Summarizing Narrative Texts</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <h4 class="font-bold text-xl text-green-700 mb-2">Objectives</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Differentiate between retelling and summarizing.</li>
+                                <li>Identify essential narrative elements (Somebody, Wanted, But, So, Then).</li>
+                                <li>Construct a three-sentence summary paragraph.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl text-green-700 mb-2">Materials</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Short narrative texts</li>
+                                <li>"Somebody Wanted But So Then" graphic organizer</li>
+                                <li>Chart paper or whiteboard</li>
+                                <li>Optional: Sentence starters for summarizing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-xl text-green-700 mb-4 border-b-2 border-green-200 pb-2">5E Model Procedure</h4>
+                        <div class="space-y-6">
+                            <div>
+                                <h5 class="font-bold text-lg">1. Engage (10-15 min)</h5>
+                                <p class="text-gray-700"><strong>Activate Prior Knowledge:</strong> Ask students to "tell you about" a recently read story. Guide them to notice the difference between retelling every detail versus focusing on the main points, introducing the concept of summarizing.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">2. Explore (15-20 min)</h5>
+                                <p class="text-gray-700"><strong>Introduce Strategy:</strong> Introduce the "Somebody Wanted But So Then" framework as a tool to find the essential parts of a story. Explain what each part represents (main character, goal, problem, action, resolution).</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">3. Explain (20-25 min)</h5>
+                                <p class="text-gray-700"><strong>Teacher Modeling:</strong> Read a short, familiar text aloud. Use a think-aloud to fill out the "SWBST" organizer on chart paper. Then, model how to combine these elements into a concise 3-sentence summary paragraph.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">4. Elaborate (25-30 min)</h5>
+                                <p class="text-gray-700"><strong>Partner Practice:</strong> In pairs, students read a new short text and collaboratively complete the "SWBST" organizer. They then work together to draft their 3-sentence summary.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">5. Evaluate (10-15 min)</h5>
+                                <p class="text-gray-700"><strong>Independent Application:</strong> Students independently read a new text, complete the organizer, and write their own summary. Collect these to assess their application of the strategy.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="mt-8">
+                        <h4 class="font-bold text-xl text-green-700 mb-4 border-b-2 border-green-200 pb-2">Differentiation & Assessment</h4>
+                        <div class="grid md:grid-cols-2 gap-6 text-gray-700">
+                            <div>
+                                <h5 class="font-semibold mb-2">Differentiation Strategies</h5>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>Provide partially filled graphic organizers for Tier 2/3 students.</li>
+                                    <li>Use picture sequencing cards for ELs to build the narrative first.</li>
+                                    <li>Offer sentence frames for constructing the summary paragraph.</li>
+                                    <li>Challenge advanced learners to summarize a chapter or longer text.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold mb-2">Assessment Methods</h5>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li><strong>Formative:</strong> Review completed "SWBST" organizers for accuracy in identifying key story elements.</li>
+                                    <li><strong>Summative:</strong> Evaluate the independently written summary paragraph using a rubric for conciseness and inclusion of essential elements.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Predicting Lesson Plan -->
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow mb-12">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-green-800">Crystal Ball Reading: Making Predictions</h3>
+                        <p class="text-gray-600">4th/5th Grade ELA</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <h4 class="font-bold text-xl text-green-700 mb-2">Objectives</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Define prediction and its role in active reading.</li>
+                                <li>Use text features to make predictions before reading.</li>
+                                <li>Use textual evidence to make and refine predictions during reading.</li>
+                                <li>Verify or adjust predictions and explain reasoning.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl text-green-700 mb-2">Materials</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Age-appropriate texts with clear features</li>
+                                <li>"Prediction Tracker" graphic organizer</li>
+                                <li>Highlighters or sticky notes</li>
+                                <li>Sentence frames for predictions</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-xl text-green-700 mb-4 border-b-2 border-green-200 pb-2">5E Model Procedure</h4>
+                        <div class="space-y-6">
+                            <div>
+                                <h5 class="font-bold text-lg">1. Engage (10-15 min)</h5>
+                                <p class="text-gray-700"><strong>Mystery Cover/Title:</strong> Show only the cover or title of a new text. Ask students to predict what it will be about and why. Explain this is making a prediction, an educated guess based on clues.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">2. Explore (15-20 min)</h5>
+                                <p class="text-gray-700"><strong>Text Feature Walk:</strong> Guide students to examine all text features (headings, illustrations, etc.) and record their initial predictions on the "Prediction Tracker" graphic organizer before reading.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">3. Explain (20-25 min)</h5>
+                                <p class="text-gray-700"><strong>Model "Abandon/Enhance":</strong> Read the first section of the text. Use a think-aloud to model how new information confirms, changes ("enhances"), or disproves ("abandons") your initial prediction. Introduce sentence frames like "I think..." or "If..., then...".</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">4. Elaborate (25-30 min)</h5>
+                                <p class="text-gray-700"><strong>Guided Practice with Checkpoints:</strong> Continue reading, pausing at strategic points. In pairs, have students discuss new evidence and decide whether to abandon or enhance their predictions on their organizers.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">5. Evaluate (15-20 min)</h5>
+                                <p class="text-gray-700"><strong>Independent Application:</strong> Students use a new short passage to independently complete the entire "Prediction Tracker," including a final reflection on whether their prediction was correct and why.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="mt-8">
+                        <h4 class="font-bold text-xl text-green-700 mb-4 border-b-2 border-green-200 pb-2">Differentiation & Assessment</h4>
+                        <div class="grid md:grid-cols-2 gap-6 text-gray-700">
+                            <div>
+                                <h5 class="font-semibold mb-2">Differentiation Strategies</h5>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>Chunk text into smaller sections for making predictions.</li>
+                                    <li>Provide sentence frames for both oral and written predictions.</li>
+                                    <li>Use visuals and audio support for ELs and students with IEPs.</li>
+                                    <li>Challenge advanced learners to justify multiple plausible predictions.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold mb-2">Assessment Methods</h5>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li><strong>Formative:</strong> Observe partner discussions and check "Prediction Tracker" organizers at checkpoints.</li>
+                                    <li><strong>Summative:</strong> Evaluate the completed independent "Prediction Tracker" and written reflection for logical refinement of predictions based on evidence.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Questioning Lesson Plan -->
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow mb-12">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-green-800">The Power of Questions: Unlocking Text Comprehension</h3>
+                        <p class="text-gray-600">4th/5th Grade ELA</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <h4 class="font-bold text-xl text-green-700 mb-2">Objectives</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Differentiate between literal, inferential, and evaluative questions.</li>
+                                <li>Generate questions before, during, and after reading.</li>
+                                <li>Explain how questioning enhances comprehension.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl text-green-700 mb-2">Materials</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Age-appropriate text</li>
+                                <li>"Questioning Cube" or question word cards</li>
+                                <li>"My Questioning Toolkit" graphic organizer</li>
+                                <li>Sentence frames for question generation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-xl text-green-700 mb-4 border-b-2 border-green-200 pb-2">5E Model Procedure</h4>
+                        <div class="space-y-6">
+                            <div>
+                                <h5 class="font-bold text-lg">1. Engage (10-15 min)</h5>
+                                <p class="text-gray-700"><strong>Question Scavenger Hunt:</strong> Start with a "Mystery Object" and have students generate as many questions as they can about it. Explain that good readers do the same with texts.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">2. Explore (15-20 min)</h5>
+                                <p class="text-gray-700"><strong>Text Preview:</strong> Before reading, guide students to look at text features and generate 2-3 "Before Reading" questions on their graphic organizer.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">3. Explain (20-25 min)</h5>
+                                <p class="text-gray-700"><strong>Explicit Instruction:</strong> Define and model the three types of questions: Literal (On the Line), Inferential (Between the Lines), and Evaluative (Beyond the Lines), using think-alouds with the text.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">4. Elaborate (25-30 min)</h5>
+                                <p class="text-gray-700"><strong>Collaborative Questioning:</strong> In pairs, students read the text in chunks and generate at least one of each question type, categorizing them on their graphic organizers.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">5. Evaluate (15-20 min)</h5>
+                                <p class="text-gray-700"><strong>Independent Application:</strong> With a new text, students independently generate and categorize questions for before, during, and after reading, then reflect on how the process helped them understand.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="mt-8">
+                        <h4 class="font-bold text-xl text-green-700 mb-4 border-b-2 border-green-200 pb-2">Differentiation & Assessment</h4>
+                        <div class="grid md:grid-cols-2 gap-6 text-gray-700">
+                            <div>
+                                <h5 class="font-semibold mb-2">Differentiation Strategies</h5>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>Provide question stems for each question type.</li>
+                                    <li>Use visual cues (e.g., hand gestures) to represent each type.</li>
+                                    <li>Conduct the lesson in intensive small groups for Tier 2/3 students.</li>
+                                    <li>Challenge advanced learners to create questions for their peers to answer.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold mb-2">Assessment Methods</h5>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li><strong>Formative:</strong> Observe partner discussions and review "My Questioning Toolkit" organizers.</li>
+                                    <li><strong>Summative:</strong> Evaluate the independently generated questions for variety, appropriateness, and correct categorization.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visualizing Lesson Plan -->
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow mb-12">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-green-800">Painting Pictures with Words: Visualizing as We Read</h3>
+                        <p class="text-gray-600">4th/5th Grade ELA</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <h4 class="font-bold text-xl text-green-700 mb-2">Objectives</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Define visualizing as creating mental images.</li>
+                                <li>Use textual clues (sensory details) to create mental images.</li>
+                                <li>Explain how visualizing enhances comprehension.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl text-green-700 mb-2">Materials</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Descriptive narrative or non-fiction text</li>
+                                <li>Art supplies or digital drawing tools</li>
+                                <li>"My Mental Movie" graphic organizer</li>
+                                <li>Sentence frames for describing images</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-xl text-green-700 mb-4 border-b-2 border-green-200 pb-2">5E Model Procedure</h4>
+                        <div class="space-y-6">
+                            <div>
+                                <h5 class="font-bold text-lg">1. Engage (10-15 min)</h5>
+                                <p class="text-gray-700"><strong>Sensory Warm-up:</strong> Ask students to close their eyes and imagine a familiar place, describing what they see, hear, and smell. Explain this is what good readers do with text.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">2. Explore (15-20 min)</h5>
+                                <p class="text-gray-700"><strong>Blind Reading & Sharing:</strong> Read a highly descriptive passage aloud while students close their eyes. Afterward, have them sketch or verbally describe the "mental movie" they created.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">3. Explain (20-25 min)</h5>
+                                <p class="text-gray-700"><strong>Teacher Think-Aloud:</strong> Model how specific words (adjectives, sensory details) help you create a mental picture. Demonstrate filling out the "My Mental Movie" graphic organizer.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">4. Elaborate (25-30 min)</h5>
+                                <p class="text-gray-700"><strong>Guided Practice:</strong> Read a new passage in chunks. After each chunk, have students identify text clues and sketch or describe their mental image on their graphic organizer, refining it as they get more information.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">5. Evaluate (15-20 min)</h5>
+                                <p class="text-gray-700"><strong>Independent Application:</strong> Students independently read a new passage and complete the "My Mental Movie" graphic organizer, then write a short reflection on how the strategy helped them.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="mt-8">
+                        <h4 class="font-bold text-xl text-green-700 mb-4 border-b-2 border-green-200 pb-2">Differentiation & Assessment</h4>
+                        <div class="grid md:grid-cols-2 gap-6 text-gray-700">
+                            <div>
+                                <h5 class="font-semibold mb-2">Differentiation Strategies</h5>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>Chunk text into very small, manageable sections.</li>
+                                    <li>Allow drawing as the primary method of expression for students who struggle with writing.</li>
+                                    <li>Use real pictures or video clips to build background knowledge.</li>
+                                    <li>Challenge advanced learners to write their own descriptive passages.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold mb-2">Assessment Methods</h5>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li><strong>Formative:</strong> Observe partner discussions and review "My Mental Movie" organizers for the connection between text and image.</li>
+                                    <li><strong>Summative:</strong> Evaluate the independent graphic organizer and reflection for detailed, text-supported mental images.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Determining Importance Lesson Plan -->
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-green-800">Unpacking the Text: Finding the Main Idea</h3>
+                        <p class="text-gray-600">4th/5th Grade ELA</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <h4 class="font-bold text-xl text-green-700 mb-2">Objectives</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Define main idea and supporting details.</li>
+                                <li>Distinguish between essential and non-essential information.</li>
+                                <li>Identify the main idea and key supporting details in a text.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl text-green-700 mb-2">Materials</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Informational or narrative texts</li>
+                                <li>"Main Idea and Supporting Details" graphic organizer</li>
+                                <li>Highlighters or sticky notes</li>
+                                <li>Sentence frames for summarizing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-xl text-green-700 mb-4 border-b-2 border-green-200 pb-2">5E Model Procedure</h4>
+                        <div class="space-y-6">
+                            <div>
+                                <h5 class="font-bold text-lg">1. Engage (10-15 min)</h5>
+                                <p class="text-gray-700"><strong>"Clutter" Activity:</strong> Show a busy picture and ask students to describe what it's "mostly about" in one sentence. Explain that reading is similar—we find the most important part.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">2. Explore (15-20 min)</h5>
+                                <p class="text-gray-700"><strong>Initial Read & Guess:</strong> Have students read a short text and share their first impressions of what it was mostly about. Record ideas without correction.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">3. Explain (20-25 min)</h5>
+                                <p class="text-gray-700"><strong>Explicit Instruction:</strong> Define "Main Idea" (the most important point) and "Supporting Details" (facts/examples that prove it). Model finding these in a text using a think-aloud and filling out a graphic organizer.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">4. Elaborate (25-30 min)</h5>
+                                <p class="text-gray-700"><strong>Guided Practice:</strong> In pairs, students read a new text, discuss the main idea, identify key details, and complete a graphic organizer together.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-lg">5. Evaluate (15-20 min)</h5>
+                                <p class="text-gray-700"><strong>Independent Application:</strong> Students independently read a new passage, complete a main idea graphic organizer, and write a one-sentence summary.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="mt-8">
+                        <h4 class="font-bold text-xl text-green-700 mb-4 border-b-2 border-green-200 pb-2">Differentiation & Assessment</h4>
+                        <div class="grid md:grid-cols-2 gap-6 text-gray-700">
+                            <div>
+                                <h5 class="font-semibold mb-2">Differentiation Strategies</h5>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li>Provide partially filled graphic organizers or sentence frames.</li>
+                                    <li>Guide students to highlight potential main ideas and details before writing.</li>
+                                    <li>Use the "SWBST" organizer for narrative texts.</li>
+                                    <li>Challenge advanced learners with texts where the main idea is implied.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold mb-2">Assessment Methods</h5>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li><strong>Formative:</strong> Observe partner discussions and review graphic organizers for accurate identification of main idea and details.</li>
+                                    <li><strong>Summative:</strong> Evaluate the independent graphic organizer and one-sentence summary for accuracy and conciseness.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Demonstrations Section -->
+        <section id="videos" class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-green-800 mb-12">Strategies in Action</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    
+                    <!-- Video Card 1 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center">
+                        <img src="https://placehold.co/200x200/a3b899/ffffff?text=Video+1" class="w-32 h-32 rounded-full object-cover mb-4 md:mb-0 md:mr-6" alt="Teacher with students in a small group">
+                        <div>
+                            <h3 class="text-xl font-bold text-green-800">Small Group: Making Inferences</h3>
+                            <p class="text-gray-600 mt-2 mb-4">Watch a teacher guide a small group of 4th graders to make inferences using a short, high-interest text.</p>
+                            <button onclick="openModal('video1')" class="bg-green-700 text-white font-bold py-2 px-4 rounded-full hover:bg-green-800 transition-colors">
+                                Watch Video
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Video Card 2 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center">
+                        <img src="https://placehold.co/200x200/a3b899/ffffff?text=Video+2" class="w-32 h-32 rounded-full object-cover mb-4 md:mb-0 md:mr-6" alt="Teacher at a whiteboard">
+                        <div>
+                            <h3 class="text-xl font-bold text-green-800">Modeling: Visualizing a Scene</h3>
+                            <p class="text-gray-600 mt-2 mb-4">See how to effectively model the visualizing strategy through a think-aloud with a 5th-grade class.</p>
+                            <button onclick="openModal('video2')" class="bg-green-700 text-white font-bold py-2 px-4 rounded-full hover:bg-green-800 transition-colors">
+                                Watch Video
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Printable Resources Section -->
+        <section id="resources" class="py-16 bg-green-50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-green-800 mb-4">Printable Resources</h2>
+                <p class="max-w-2xl mx-auto text-lg text-gray-600 mb-8">
+                    Here are some ready-to-use resources for your classroom. Feel free to download, print, and adapt them for your students.
+                </p>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="#" class="bg-white shadow-md rounded-lg p-4 w-64 text-center hover:shadow-xl transition-shadow">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                        <h4 class="font-bold mt-2">Main Idea Organizer</h4>
+                        <p class="text-sm text-gray-500">PDF</p>
+                    </a>
+                    <a href="#" class="bg-white shadow-md rounded-lg p-4 w-64 text-center hover:shadow-xl transition-shadow">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.546-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <h4 class="font-bold mt-2">Questioning Toolkit</h4>
+                        <p class="text-sm text-gray-500">PDF</p>
+                    </a>
+                    <a href="#" class="bg-white shadow-md rounded-lg p-4 w-64 text-center hover:shadow-xl transition-shadow">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
+                        <h4 class="font-bold mt-2">Inference Graphic Organizer</h4>
+                        <p class="text-sm text-gray-500">PDF</p>
+                    </a>
+                    <a href="#" class="bg-white shadow-md rounded-lg p-4 w-64 text-center hover:shadow-xl transition-shadow">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <h4 class="font-bold mt-2">Predicting Graphic Organizer</h4>
+                        <p class="text-sm text-gray-500">PDF</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Resources Section -->
+        <section id="other-resources" class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-green-800 mb-12">Additional Tier 2 & Tier 3 Resources</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="font-bold text-xl text-green-800 mb-2">High-Interest, Low-Readability Books</h3>
+                        <p class="text-gray-700">These books are written at a lower reading level but feature age-appropriate topics. They allow struggling readers to engage with complex themes without being frustrated by text complexity.</p>
+                        <p class="text-sm text-green-700 mt-2">Examples: Orca Book Publishers, Saddleback Educational Publishing</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="font-bold text-xl text-green-800 mb-2">Digital Reading Platforms</h3>
+                        <p class="text-gray-700">Platforms like Epic!, ReadWorks, and Newsela offer vast libraries of digital books with features like read-aloud support, in-text vocabulary definitions, and adjustable reading levels for scaffolding.</p>
+                        <a href="https://www.readworks.org" target="_blank" class="text-green-600 hover:underline mt-2 inline-block">Explore Digital Tools &rarr;</a>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="font-bold text-xl text-green-800 mb-2">Graphic Novels</h3>
+                        <p class="text-gray-600">The combination of text and illustrations provides strong contextual support. They can help students practice inferencing and visualizing while keeping them highly engaged.</p>
+                        <p class="text-sm text-green-700 mt-2">Popular Series: "Dog Man", "Smile", "Amulet"</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="font-bold text-xl text-green-800 mb-2">Audiobooks & Paired Reading</h3>
+                        <p class="text-gray-600">Listening to a fluent reader models prosody and helps with decoding. Students can follow along in a physical book while listening to an audiobook to build fluency and confidence.</p>
+                        <p class="text-sm text-green-700 mt-2">Sources: Audible, Libby (Library App)</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="font-bold text-xl text-green-800 mb-2">Diffit for Differentiation</h3>
+                        <p class="text-gray-700">Diffit is a powerful tool that allows you to adapt any text or article for different reading levels. You can paste in a text, and it will generate a simplified version, vocabulary lists, comprehension questions, and summary points.</p>
+                        <a href="https://www.diffit.me" target="_blank" class="text-green-600 hover:underline mt-2 inline-block">Try Diffit &rarr;</a>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="font-bold text-xl text-green-800 mb-2">Reading Specialist Assistant</h3>
+                        <p class="text-gray-700">This AI-powered chatbot can provide instant support, generate lesson ideas, and answer questions about reading strategies, acting as a helpful assistant for educators.</p>
+                        <a href="https://poe.com/Read_Special_Test" target="_blank" class="text-green-600 hover:underline mt-2 inline-block">Chat with the Assistant &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- References Section -->
+        <section id="references" class="py-16 bg-green-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-green-800 mb-12">References</h2>
+                <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow text-gray-700 space-y-4 text-sm md:text-base">
+                    <p class="reference-item">Al Otaiba, S., Folsom, J. S., Schatschneider, C., & Wanzek, J. (2011). RTI for reading in the primary grades: A focus on small-group instruction and curriculum-based measurement. *Child Development Research*, *2011*, 1-11. https://doi.org/10.1155/2011/861604</p>
+                    <p class="reference-item">Baker, K. (2022). *Before, during, and after reading questions for any book - fiction & nonfiction* [Graphic organizer]. TPT. https://www.teacherspayteachers.com/Product/Before-During-and-After-Reading-Questions-for-Any-Book-Fiction-Nonfiction-7718469</p>
+                    <p class="reference-item">Baptiste, B. (2013). *Reading comprehension bookmarks* [Bookmark]. TPT. https://www.teacherspayteachers.com/Product/Reading-Comprehension-Bookmarks-750554</p>
+                    <p class="reference-item">Beers, K. (2003). *When kids can't read, what teachers can do: A guide for teachers, 6-12*. Heinemann.</p>
+                    <p class="reference-item">The Classroom Nook. (2024). *Reading comprehension strategy series: How to teach students to ask questions when they read*. The Classroom Nook. https://www.classroomnook.com/blog/reading-strategy-asking-questions</p>
+                    <p class="reference-item">dePaola, T., Lee, S., Smith, D., Bradley, K. B., Marzollo, J., Jenkins, S., Turkle, B., Thomson, B., Cobb, V., & Moss, M. (n.d.). *Inferencing*. Reading Rockets. Retrieved July 28, 2025, from https://www.readingrockets.org/classroom/classroom-strategies/inferencing</p>
+                    <p class="reference-item">Education Resources for Teachers. (2025). *Smart (self monitoring approach to reading and thinking)*. University of Minnesota. https://dhh-resources.umn.edu/language-literacy/k-12-reading-strategies/smartself-monitoring-approach-to-reading-and-thinking/</p>
+                    <p class="reference-item">Flood, L. (2012). *{FREE} Summary Graphic Organizers* [Graphic organizer]. TPT. https://www.teacherspayteachers.com/Product/FREE-Summary-Graphic-Organizers-435426</p>
+                    <p class="reference-item">Fountas, I. C., & Pinnell, G. S. (2013). *Leveled Literacy Intervention Lesson Guide: LLI Red System, Levels L-M, Lessons 1-64* (Vol. 1). Heinemann.</p>
+                    <p class="reference-item">Hatkoff, I., Baines, B., & George, J. C. (n.d.). *Summarizing*. Reading Rockets. Retrieved July 28, 2025, from https://www.readingrockets.org/classroom/classroom-strategies/summarizing</p>
+                    <p class="reference-item">Howe, D., Pinkney, J., Lin, G., Sidman, J., Cousins, L., Yolen, J., Scanlon, L., & Blume, J. (n.d.). *Visual imagery*. Reading Rockets. Retrieved July 28, 2025, from https://www.readingrockets.org/classroom/classroom-strategies/visual-imagery</p>
+                    <p class="reference-item">Lee, M., Sanvik, M., & Bottem, D. (n.d.). *Summarizing*. Strategies for special interventions. Retrieved July 28, 2025, from https://strategiesforspecialinterventions.weebly.com/summarizing.html</p>
+                    <p class="reference-item">Matt. (2024). *Questioning strategies for reading comprehension ultimate guide*. TeamTom Education. https://teamtomeducation.com/questioning-strategies-reading-comprehension/</p>
+                    <p class="reference-item">Melissa. (2024). *Monitoring comprehension activities guaranteed to get kids thinking*. The Reading Roundup. https://thereadingroundup.com/monitoring-comprehension-activities/</p>
+                    <p class="reference-item">Model Teaching. (2023). *Reading comprehension graphic organizer tool – making inferences*. https://www.modelteaching.com/education-resource-item/listing/reading-comprehension-graphic-organizer-tool-making-inferences</p>
+                    <p class="reference-item">*Reading strategies: Visualizing: Worksheet*. (2025). Education.com. https://www.education.com/worksheet/article/reading-strategies-visualizing/</p>
+                    <p class="reference-item">Shearer, K. A., Pentimonti, J. M., & Justice, L. M. (2019). Teacher-child conversations in a tiered language intervention. *Early Education and Development*, *30*(5), 605-624. https://doi.org/10.1080/10409289.2018.1563725</p>
+                    <p class="reference-item">TeacherVision Staff. (2007). *Predicting lesson*. TeacherVision. https://www.teachervision.com/reading/predicting-lesson</p>
+                    <p class="reference-item">TeamTom Education. (2024). *32 open-ended questions for reading comprehension*. https://teamtomeducation.com/32-open-ended-questions-for-reading-comprehension/</p>
+                    <p class="reference-item">White and Walnut. (2017). *Predicting graphic organizer* [Graphic organizer]. TPT. https://www.teacherspayteachers.com/Product/Predicting-Graphic-Organizer-884616</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-800 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2025 Cultivating Comprehension Professional Development.</p>
+            <p class="text-sm text-green-200 mt-2">Created with care for dedicated educators.</p>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal-overlay fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden opacity-0" x-data="{ open: false }" @keydown.escape.window="closeModal()">
+        <div class="bg-white rounded-lg shadow-2xl w-full max-w-3xl transform scale-95 transition-transform duration-300" @click.away="closeModal()">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 id="videoTitle" class="text-xl font-bold text-green-800">Video Title</h3>
+                <button @click="closeModal()" class="text-gray-500 hover:text-gray-800 text-3xl leading-none">&times;</button>
+            </div>
+            <div class="p-4">
+                <div id="videoContainer" class="aspect-w-16 aspect-h-9 bg-black rounded-lg">
+                    <!-- Iframe will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('videoModal');
+        const modalTitle = document.getElementById('videoTitle');
+        const videoContainer = document.getElementById('videoContainer');
+
+        const videoData = {
+            video1: {
+                title: "Small Group: Making Inferences",
+                embed: `<iframe class="w-full h-full" src="https://www.youtube.com/embed/BhLelq3mLZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+            },
+            video2: {
+                title: "Modeling: Visualizing a Scene",
+                embed: `<iframe class="w-full h-full" src="https://www.youtube.com/embed/dhW8szgSTxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+            }
+        };
+
+        function openModal(videoId) {
+            const data = videoData[videoId];
+            if (!data) return;
+
+            modalTitle.textContent = data.title;
+            videoContainer.innerHTML = data.embed;
+            
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.querySelector('.transform').classList.remove('scale-95');
+            }, 10); // Start transition after display is set
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            modal.querySelector('.transform').classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                videoContainer.innerHTML = ''; // Clear content to stop video playback
+            }, 300); // Wait for transition to finish
+        }
+
+        // Close modal on overlay click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+        
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
